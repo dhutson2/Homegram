@@ -3,9 +3,9 @@
 
 
 use Illuminate\Support\Str;
-
-$DATABASE_URL=parse_url('postgres://oybpovorcavrmx:977c44dd6bf14107dc289d8995f2599aa7e44c59809288ce43153120a18352ea@ec2-23-23-182-18.compute-1.amazonaws.com:5432/dcmgetsjclr0go
-');
+$DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+// $DATABASE_URL=parse_url('postgres://oybpovorcavrmx:977c44dd6bf14107dc289d8995f2599aa7e44c59809288ce43153120a18352ea@ec2-23-23-182-18.compute-1.amazonaws.com:5432/dcmgetsjclr0go
+// ');
 return [
 
     /*
