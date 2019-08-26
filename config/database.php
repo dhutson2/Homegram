@@ -5,11 +5,8 @@
 //TODO: Check all heroku connection variables
 use Illuminate\Support\Str;
 
-$DATABASE_URL=parse_url(getenv("DATABASE_URL"));
-$host = $DATABASE_URL["host"]?? null;
-$username = $DATABASE_URL["user"]?? null;
-$password = $DATABASE_URL["pass"]?? null;
-$database = substr($DATABASE_URL["path"], 1)?? null;
+$DATABASE_URL=parse_url('postgres://hmcjogndvnxmzi:4d75b7db0e0cd80e3df1248a0b0c924ea6483f8850d6d1d2c70c0af4f7825b26@ec2-54-83-201-84.compute-1.amazonaws.com:5432/debucudgpknvml');
+
 
 return [
 
@@ -74,16 +71,16 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $host,
+            'host' => $DATABASE_URL["host"],
             'port' => $DATABASE_URL["port"],
-            'database' => $database,
-            'username' => $username,
-            'password' => $password,
+            'database' => ltrim($DATABASE_URL["path"], "/"),
+            'username' => $DATABASE_URL["user"],
+            'password' => $DATABASE_URL["pass"],
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
-            'sslmode' => 'require',
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
