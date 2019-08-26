@@ -1,7 +1,8 @@
 <?php
 
 
-
+//TODO: check this DB dict connection
+//TODO: Check all heroku connection variables
 use Illuminate\Support\Str;
 $DATABASE_URL = parse_url("postgres://jxldxmukpnnbpr:5591078c28689baba34dbca6cba94e367b41e37d4ded4eb607c55717dfee0e16@ec2-54-225-205-79.compute-1.amazonaws.com:5432/degbjpci3k4s2j
 ");
