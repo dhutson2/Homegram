@@ -67,7 +67,6 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => "postgres://oybpovorcavrmx:977c44dd6bf14107dc289d8995f2599aa7e44c59809288ce43153120a18352ea@ec2-23-23-182-18.compute-1.amazonaws.com:5432/dcmgetsjclr0go",
             'host' => $DATABASE_URL["host"],
             'port' => $DATABASE_URL["port"],
             'database' => ltrim($DATABASE_URL["path"], "/"),
