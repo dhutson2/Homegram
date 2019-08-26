@@ -4,10 +4,13 @@
 //TODO: check this DB dict connection
 //TODO: Check all heroku connection variables
 use Illuminate\Support\Str;
-$DATABASE_URL = parse_url("postgres://jxldxmukpnnbpr:5591078c28689baba34dbca6cba94e367b41e37d4ded4eb607c55717dfee0e16@ec2-54-225-205-79.compute-1.amazonaws.com:5432/degbjpci3k4s2j
-");
-// $DATABASE_URL=parse_url('postgres://oybpovorcavrmx:977c44dd6bf14107dc289d8995f2599aa7e44c59809288ce43153120a18352ea@ec2-23-23-182-18.compute-1.amazonaws.com:5432/dcmgetsjclr0go
-// ');
+
+$DATABASE_URL=parse_url(getenv("DATABASE_URL"));
+$host = $DATABASE_URL["host"]?? null;
+$username = $DATABASE_URL["user"]?? null;
+$password = $DATABASE_URL["pass"]?? null;
+$database = substr($DATABASE_URL["path"], 1)?? null;
+
 return [
 
     /*
@@ -71,11 +74,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
+            'host' => $host,
             'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
