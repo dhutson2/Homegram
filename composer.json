@@ -2,6 +2,11 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://git.heroku.com/homegram.git"
+
+    }],
     "keywords": [
         "framework",
         "laravel"
