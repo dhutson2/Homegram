@@ -56,7 +56,7 @@ class PostsController extends Controller
 
     public function show(\App\Post $post)
     {
-        // dd($post); // dd is a good way to test if your route works before you create view
-        return view('posts.show', compact('post'));
+        dd($post); // dd is a good way to test if your route works before you create view
+        // return view('posts.show', compact('post'));
     }
 }
