@@ -19,3 +19,5 @@ Route map:
 ◻️Add search to find specific users
 
 ◻️Add search to find specific content
+
+◻️Deploy onto heroku or other platform
