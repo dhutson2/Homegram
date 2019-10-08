@@ -8,7 +8,7 @@ use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
-    // this middleware function authenticates user before anything below it can be done
+    // this middleware function authenticates user before anything below can be done
     public function __construct()
     {
         $this->middleware('auth');
