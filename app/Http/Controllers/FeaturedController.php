@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
-class FeaturedController extends Controllers
+class FeaturedController extends Controller
 {
     public function __construct()
     {
@@ -17,5 +17,6 @@ class FeaturedController extends Controllers
     public function index()
     {
         // here is where we will display the list of featured users
+        return redirect('/featured');
     }
 }
