@@ -34,6 +34,7 @@ class PostsController extends Controller
             'image' => ['required','image'],
         ]);
 
+        dd(request('image'));
         $imagePath = request('image')->store('uploads', 'public'); //second argument is where to store upload
         // can use s3 instead of public to store in amazon DB if using AWS
         
