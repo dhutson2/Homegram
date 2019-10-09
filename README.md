@@ -2,7 +2,16 @@ Homegram - A social application where you can share houses to inspire creativity
 
 Similar to instagram but geared towards creative and beautiful houses, you will find a lot of the same social functionality (follow others and have followers, upload images with captions, comment on posts)
 
-Route map:
+**Deployment:**
+
+Currently running locally!
+
+-   Fork repo
+-   Navigate into main project folder
+-   Run command PHP artisan serve
+-   Navigate to http://127.0.0.1:8000
+
+**Route map:**
 
 ☑ Create and edit profiles
 

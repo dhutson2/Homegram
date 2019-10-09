@@ -13,10 +13,10 @@ class FeaturedController extends Controller
         $this -> middleware('auth');
     }
 
-    // should we reference profile or user to get user's profile image?
-    public function index()
+    public function index(\App\Post $posts)
     {
-        // here is where we will display the list of featured users
-        return redirect('/featured');
+        $posts = user()->posts()->image;
+
+        return view('profiles.featured', compact('posts'));
     }
 }
